@@ -143,3 +143,17 @@
 		</tr>
 	</tbody>
 </table>
+
+<h3>Setup</h3>
+<p>To setup the application you need to have PHP and MySQL running. The application needs to be hosted as a root domain or subdomain for the routing system to work. When you have this setup you can use the newsapp.sql file to create the database needed.</p>
+<p>use /app/start.php to setup your DB information and base path (PATH_BASE constant) so that the application knows where it runs.</p>
+
+<h3>User credentials</h3>
+<p>The application have a basic user system that uses a simple hash instead of clear text passwords for security. The sql file is seeded with 3 user accounts, where 2 are of interest:</p>
+<p>user@test.com:test1234 - User with no admin rights</p>
+<p>admin@test.com:test1234 - User with admin rights</p>
+
+<p>To gain control of administrative views you need to be logged in as admin@test.com</p>
+<p>You need the email and key values to interact with the API as well, when you do this you just set:</p>
+<p>user_email: email</p>
+<p>user_key: key</p>
