@@ -1,0 +1,35 @@
+article.news-article:hover {
+	cursor: pointer;
+	background: #eee;
+	border-radius: 3px;
+}
+
+article header {
+	margin-bottom: 10px;
+}
+
+.edit-btn, .delete-btn {
+	text-align: center;
+	line-height: 46px;
+	width: 46px;
+	height: 46px;
+	border-radius: 30px;
+	background-color: #eee;
+	margin: 5px;
+}
+
+.edit-btn:hover {
+	background-color: #337ab7;
+	cursor: pointer;
+	color: #fff;
+}
+
+.delete-btn:hover {
+	background-color: #d43f3a;
+	cursor: pointer;
+	color: #fff;
+}
+
+.footer {
+	margin-top: 40px;
+}

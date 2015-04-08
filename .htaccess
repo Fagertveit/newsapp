@@ -1,0 +1,23 @@
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{THE_REQUEST} index\.php
+#RewriteRule ^index\.php$ http://example\.com/ [R=301,L]
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index\.php [L]
+
+RewriteEngine On
+
+# redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.fagertveit\.com$ [NC]
+RewriteRule ^(.*)$ https://fagertveit.com/$1 [L,R=301]
+
+# redirect direct requests to /index.php to remove it
+RewriteCond %{THE_REQUEST} \ /index\.php/?([^\?\ ]*)
+RewriteRule ^ https://fagertveit.com/%1 [L,R=301]
+
+# internally route to /index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [PT,L]  
