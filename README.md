@@ -1,7 +1,7 @@
 <h1>Newsapp</h1>
 <p>Newsapp is a simple CRUD application written in PHP to handle a news article site.</p>
 <p>The application features a pretty url router and RESTful API for management of articles, it also have a basic interface where the client can either read the articles or login as admin to administrate articles</p>
-<p>When administrating articles the application uses a simple javascript interface to communicate with the API through ajax calls.</p>
+<p>When administrating articles the application uses a simple javascript interface to communicate with the API through ajax calls. The application response with json.</p>
 <p>The following is valid routes: </p>
 <table>
 	<thead>
@@ -157,3 +157,7 @@
 <p>You need the email and key values to interact with the API as well, when you do this you just set:</p>
 <p>user_email: email</p>
 <p>user_key: key</p>
+
+<h3>Live test</h3>
+<p>You can access a live test version of the application if you go to the following url: <a href="http://newsapp.fagertveit.com/">http://newsapp.fagertveit.com</a></p>
+<p>API routes can be accessed at http://newsapp.fagertveit.com/api/</p>
